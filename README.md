@@ -1,5 +1,4 @@
 # hearstat/jenkins-build-base
-================
 
 Container to be utilized with the Jenkins Docker Plugin
 
@@ -16,11 +15,11 @@ Container to be utilized with the Jenkins Docker Plugin
 ### Dockerfile
 
 ```dockerfile
-FROM jenkins-build-base:debian
+FROM hearstat/jenkins-build-base:debian
 ```
 
 ```dockerfile
-FROM jenkins-build-base:alpine
+FROM hearstat/jenkins-build-base:alpine
 ```
 
 ### Build From Scratch
