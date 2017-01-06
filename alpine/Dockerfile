@@ -2,7 +2,6 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER Hearst Automation Team "atat@hearst.com"
 
-# Environment Variables
 ENV JENKINS_HOME /var/lib/jenkins
 
 RUN apk --update add \

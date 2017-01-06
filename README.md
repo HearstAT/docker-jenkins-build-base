@@ -7,8 +7,8 @@ Container to be utilized with the Jenkins Docker Plugin
 -   Base Image: openjdk:8-jdk-alpine
 -   openJDK: 8
 
-## Xenial Build Info
--   Base Image: ubuntu:xenial
+## Debian Build Info
+-   Base Image: openjdk:8
 -   openJDK: 8
 
 ## Usage
@@ -16,7 +16,7 @@ Container to be utilized with the Jenkins Docker Plugin
 ### Dockerfile
 
 ```dockerfile
-FROM jenkins-build-base:xenial
+FROM jenkins-build-base:debian
 ```
 
 ```dockerfile
@@ -28,7 +28,11 @@ FROM jenkins-build-base:alpine
 To build the image, do the following:
 
 ```bash
-docker build github.com/hearstat/docker-jenkins-build-base/xenial/
+docker build ./debian/
+```
+
+```bash
+docker build ./alpine/
 ```
 
 ### Dockerhub
