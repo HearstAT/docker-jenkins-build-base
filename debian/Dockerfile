@@ -16,14 +16,12 @@ RUN apt-get update &&\
     echo "jenkins:jenkins" | chpasswd &&\
     echo "%jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-USER jenkins
-
 VOLUME /var/lib/jenkins
 
 EXPOSE 22
 
 WORKDIR /var/lib/jenkins
 
-RUN sudo /usr/bin/ssh-keygen -A
+RUN /usr/bin/ssh-keygen -A
 
-CMD ["sudo", "/usr/sbin/sshd", "-D"]
+CMD ["/usr/sbin/sshd", "-D"]
